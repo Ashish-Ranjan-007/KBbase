@@ -18,7 +18,7 @@ const cards = [
 const Home = () => {
   return (
     <>
-      {/* <Hero /> */}
+      <Hero />
       <Carousel cards={cards}/>
       <Brands />
 

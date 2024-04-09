@@ -5,7 +5,7 @@ const Faqpage = () => {
   return (
     <>
         <h1>FAQ Section</h1>
-        <Accordion />
+        {/* <Accordion /> */}
     </>
   )
 }
