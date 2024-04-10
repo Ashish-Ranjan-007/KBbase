@@ -20,14 +20,18 @@ export default {
         'linkcolor':"#0648EF"
       },
       animation:{
-        'infinite-scroll': 'infinite-scroll 10s linear infinite',
-
+        'infinite-scrollac': 'infinite-scrollac 20s linear infinite',
+        'infinite-scrollcl':'infinite -scrollcl 20s linear infinite'
       },
       keyframes:{
-        'infinite-scroll':{
+        'infinite-scrollac':{
           from:{ transform:'translateX(0)'},
           to: {transform:'translateX(-100%)'}
-        },
+          },
+        'infinite-scrollcl':{
+            from:  {transform:'translateX(0)'},
+            to: { transform:'translateX(100%)'}
+          }
        
       },
 

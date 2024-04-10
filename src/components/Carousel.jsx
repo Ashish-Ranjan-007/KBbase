@@ -2,6 +2,7 @@ import React from 'react'
 import Card from './Card'
 import { useState,useEffect } from 'react';
 import './Carousel.css';
+import Hero from './Hero';
 
 // this is a custom carousel with external css file without tailwind -needs refinement if implemented
 
@@ -35,7 +36,6 @@ const Carousel = ({cards}) => {
       <div className="cards-container">
         {cards.map((card, index) => {
           let cardClassName = 'card';
-
           if (index === currentIndex) {
             cardClassName += ' active';
           } else if (index === currentIndex - 1 || (currentIndex === 0 && index === cards.length - 1)) {
@@ -45,15 +45,16 @@ const Carousel = ({cards}) => {
           }
           return (
             <div key={index} className={cardClassName}>
-              <Card title={card.title} content={card.content} />
+              <Card title={card.title} content={card.content} image={card.image}/>
+              <Hero /> 
             </div>
           );
           })}
        <button onClick={prevCard}>Prev</button>
        <button onClick={nextCard}>Next</button>
+       
       </div>
-    
-    </div>
+</div>
       
 </>
   );

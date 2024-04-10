@@ -1,5 +1,8 @@
 import React from 'react'
 
+
+// the Hero component is currently showing the heading and tags add images here 
+
 const herodata =
  {  "heading" : "Advanced Loan Solutions",
     "subheading" : "for India's finest disruptors",

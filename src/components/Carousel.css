@@ -22,7 +22,6 @@
     transform-origin: left center;
     transition: transform 0.5s, opacity 0.5s;
     opacity: 0;
-    color: black;
     z-index: -1;
    
   }
