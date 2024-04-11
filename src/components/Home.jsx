@@ -4,6 +4,7 @@ import Brands from './Brands'
 import Hero from './Hero'
 import Carousel from './Carousel'
 import Faqpage from './Faqsection/Faqpage'
+import Footer from './Footer/Footer'
 import { image1, image2, image3, image4 } from '../assets/heroassets'
 
 
@@ -19,7 +20,8 @@ const Home = () => {
   return (
     <>
       <Carousel cards={cards}/>
-      <Brands /> 
+      <Brands />
+      <Footer/>
 
       
     </>

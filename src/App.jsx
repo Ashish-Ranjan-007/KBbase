@@ -7,7 +7,7 @@ import Home from './components/Home';
 import SignUpPage from './components/SignUpPage';
 import Privacy from './components/Privacy';
 import Faqpage from './components/Faqsection/Faqpage';
-
+import Footer from './components/Footer/Footer';
 function App() {
 
   return (
@@ -21,6 +21,8 @@ function App() {
         <Route path="/privacy" element={<Privacy/>}/>
         <Route path="/FAQs" element={<Faqpage/>}/>
         <Route path="/*" element={<Home/>}/>
+       
+
 
       </Routes>
     </Router>

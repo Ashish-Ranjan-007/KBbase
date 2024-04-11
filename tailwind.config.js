@@ -17,7 +17,8 @@ export default {
         'primarycyan':"#cae3e8",
         "secondarycyan":"#93bfda",
         'primarycolor':'#132644',
-        'linkcolor':"#0648EF"
+        'linkcolor':"#0648EF",
+        'footerbg':'#F2F4F8',
       },
       animation:{
         'infinite-scrollac': 'infinite-scrollac 20s linear infinite',
