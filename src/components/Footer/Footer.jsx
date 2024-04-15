@@ -8,16 +8,16 @@ import whatsapp from "../../../public/mediaicons/whatsapp.png";
 const Footer = () => {
   return (
     <>
-      <div className="px-4">
-        <h1 className="text-6xl">Get your quote here </h1>
-        <h1 className="text-6xl">with FinancialConsultants</h1>
+      <div className="p-4">
+        <h1 className="text-5xl">Get your quote here </h1>
+        <h1 className="text-5xl">with FinancialConsultants</h1>
         <Link to="/Sign-up">
           <button className="bg-linkcolor hover:bg-blue-700 text-white font-bold py-2 px-4 border my-5  border-blue-700">
             Sign Up Now
           </button>
         </Link>
       </div>
-      <div className="grid grid-rows-2 sm:grid-cols-2 bg-footerbg gap-4">
+      <div className="grid grid-rows-2 sm:grid-cols-2 bg-footerbg gap-4 p-4">
         <div className="row-span-2 text-justify ">
           <h2 className="text-xl font-bold text-linkcolor">
             Financial Consultants
@@ -37,7 +37,7 @@ const Footer = () => {
             over 700 branches working under Financial Consultants.
           </p>
         </div>
-        <div className="gap-2 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 text-linkcolor font-semibold">
+        <div className="gap-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 text-linkcolor font-semibold">
           <ul className="">
             <h2 className="font-bold">LOANS</h2>
             <li>Personal loan</li>
@@ -74,7 +74,7 @@ const Footer = () => {
           </ul>
           <ul>
             <h2 className="font-bold">COMPANY</h2>
-            <li>About Us</li>
+           <Link to="/about-us"><li>About Us</li></Link>
             <li>Careers</li>
             <li>Terms of Use</li>
             <li>Privacy Policy</li>
@@ -83,7 +83,7 @@ const Footer = () => {
 
           <ul className="">
             <h2 className="font-bold">FIND US ONLINE</h2>
-            <div className="flex gap-3 h-8">
+            <div className="flex gap-3 w-7">
               <img src={facebook} alt="fbicon" />
               <img src={instagram} alt="instaicon" />
               <img src={social} alt="gmailicon" />
@@ -92,13 +92,13 @@ const Footer = () => {
           </ul>
           <ul className="">
             <h2 className="">REGD. OFFICE ADDRESS</h2>
-            <div className="text-xs text-primarycolor">
+            <ul className="text-xs text-primarycolor">
               <li>Financial Consultant</li>
               <li>Noida Sector 62 Block A,</li>
               <li>Highway tower Noida,</li>
               <li>Uttar Pradesh 201309</li>
               <li>India</li>
-            </div>
+            </ul>
           </ul>
         </div>
       </div>

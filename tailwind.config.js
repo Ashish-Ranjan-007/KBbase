@@ -19,6 +19,13 @@ export default {
         'primarycolor':'#132644',
         'linkcolor':"#0648EF",
         'footerbg':'#F2F4F8',
+        'gradherobgblue':'#E1E9FE',
+        'gradherobggreen':'#E9F8D2',
+        'gradherobgvia':'#FAFDFE',  
+
+        // 
+
+        
       },
       animation:{
         'infinite-scrollac': 'infinite-scrollac 20s linear infinite',

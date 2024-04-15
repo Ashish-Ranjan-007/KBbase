@@ -1,47 +1,79 @@
-import React from 'react'
-import logo from "../../public/FCTEMP.png"
-import { Link } from 'react-router-dom';
-import { useUser , SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/clerk-react";
+import React from "react";
+import logo from "../../public/fclogo.svg";
+import { Link } from "react-router-dom";
+import { useUser, UserButton } from "@clerk/clerk-react";
+import DropdownComp from "./DropdownComp";
 
 // needs final touches and dropdown and on hover menus
 
 function Navbar() {
-
   const { isSignedIn, user, isLoaded } = useUser();
   return (
-   <>
-    <nav className='sticky top-0 bg-white shadow-mdfont-fubuntu w-full flex justify-between items-center h-20'>
-        <div className='flex justify-evenly items-center m-2'>
-          {/* <img className= "w-10 h-10 object-fill" src={logo} alt="image"/> */}
-          <h1 className='font-bold'><Link to="/">FinancialConsultants</Link></h1>
+    <>
+      <nav className="bg-white shadow-md font-fubuntu w-full flex justify-between items-center border py-2 px-3 gap-3 ">
+        <div className="flex justify-center items-center">
+          <Link to="/">
+            <img className="w-40 h-[60px]" src={logo} alt="image" />
+          </Link>
+          {/* <Link to="/">
+            <h1 className="font-bold text-sm sm:text-md md:text-2xl text-primaryblue">
+              FinancialConsultants
+            </h1>
+           */}
         </div>
-        <div className='flex gap-2 font-semibold'>
-          <div className='hover:text-linkcolor'><Link to="/">Loans</Link></div>
-          <div className='hover:text-linkcolor'><Link to="/">Banking</Link></div>
-          <div className='hover:text-linkcolor'><Link to="/">Insurance</Link></div>
-          <div className='hover:text-linkcolor'><Link to="/">Mutual-Funds</Link></div>
-          <div className='hover:text-linkcolor'><Link to="/">Consultations</Link></div>
+        <div className=" hidden lg:flex gap-3 text-md xl:text-xl text-primarycolor relative ">
+          <Link to="/">
+            <button className="hover:text-linkcolor ">
+              <DropdownComp head={"Loan"} />
+            </button>
+          </Link>
+          <Link to="/">
+            <button className="hover:text-linkcolor ">Banking</button>
+          </Link>
+          <Link to="/">
+            <button className="hover:text-linkcolor ">Insurance</button>
+          </Link>
+          <Link to="/">
+            <button className="hover:text-linkcolor ">Mutual-Funds</button>
+          </Link>
+          <Link to="/">
+            <button className="hover:text-linkcolor ">Consultations</button>
+          </Link>
         </div>
-        <div className='flex gap-4 m-2'>  
-          {/* <SignedOut> */}
-            <> {!isSignedIn?  
+        <div className="flex gap-3 justify-center items-center ">
+          {!isSignedIn ? (
             <>
-              <Link to="/sign-in"><button className='bg-linkcolor hover:bg-blue-700 text-white font-bold py-1 px-4 border border-blue-700 '>Login</button></Link>
-              <Link to="/sign-up"><button className='bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-1 px-4 border border-blue-500 hover:border-transparent'>SignUp</button></Link>
-          </>
-          :  <UserButton /> } </>
-          {/* // </SignedOut> */}
+              <Link to="/sign-in">
+                <button className="border m-0 border-primaryblue text-linkcolor py-1 px-2 rounded-sm">
+                  Login
+                </button>
+              </Link>
+              <Link to="/sign-up">
+                <button className="bg-primaryblue text-white py-1 px-2 rounded-sm">
+                  SignUp
+                </button>
+              </Link>
+              <button className="lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 64 64"
+                  id="hamburger"
+                  className="w-8 h-8"
+                >
+                  <g fill="#134563">
+                    <path d="M8.2 13h47.5v6.3H8.2zM8.2 28.8h47.5v6.4H8.2zM8.2 44.7h47.5V51H8.2z">
+                    </path>
+                  </g>
+                </svg>
+              </button>
+            </>
+          ) : (
+            <UserButton />
+          )}
         </div>
-        {/* // <div className='flex gap-4 m-2'> 
-        //  <SignedIn>
-        //     <UserButton />
-        //   </SignedIn> 
-        // </div> */}
-       
-
-    </nav>
-   </>
-  )
+      </nav>
+    </>
+  );
 }
 
-export default Navbar
+export default Navbar;
