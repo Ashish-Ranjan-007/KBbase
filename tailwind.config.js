@@ -16,12 +16,14 @@ export default {
         'secondarygreen':"#fefefe",
         'primarycyan':"#cae3e8",
         "secondarycyan":"#93bfda",
+        'tertiarycyan':'#4793AF',
         'primarycolor':'#132644',
         'linkcolor':"#0648EF",
         'footerbg':'#F2F4F8',
         'gradherobgblue':'#E1E9FE',
         'gradherobggreen':'#E9F8D2',
-        'gradherobgvia':'#FAFDFE',  
+        'gradherobgvia':'#FAFDFE',
+        'bgcolor':'#f2f4f8'
 
         // 
 

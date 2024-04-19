@@ -77,9 +77,9 @@ const Faqpage = () => {
     <>
   <div className='flex flex-col justify-center items-center  p-2' >
   <h2 className='text-center text-4xl font-bold text-primarycolor p-4'>Frequently Asked Questions</h2>
-    <Collapse className='text-lg w-[480px] sm:w-[800px]'
+    <Collapse className='text-lg w-[320px] sm:w-[640px]'
       bordered={false}
-      defaultActiveKey={['1']}
+      // defaultActiveKey={['1']}
       expandIcon={({ isActive }) => <CaretRightOutlined rotate={isActive ? 90 : 0} />}
       style={{
         background: token.colorBgContainer,

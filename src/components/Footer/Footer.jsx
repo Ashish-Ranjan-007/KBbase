@@ -5,11 +5,13 @@ import instagram from "../../../public/mediaicons/instagram.png";
 import social from "../../../public/mediaicons/social.png";
 import whatsapp from "../../../public/mediaicons/whatsapp.png";
 
+
 const Footer = () => {
   return (
-    <>
-      <div className="p-4">
-        <h1 className="text-5xl">Get your quote here </h1>
+    <> <section className="">  
+      
+      <div className="p-8">
+        <h1 className="text-5xl">Get your quotation here </h1>
         <h1 className="text-5xl">with FinancialConsultants</h1>
         <Link to="/Sign-up">
           <button className="bg-linkcolor hover:bg-blue-700 text-white font-bold py-2 px-4 border my-5  border-blue-700">
@@ -17,8 +19,8 @@ const Footer = () => {
           </button>
         </Link>
       </div>
-      <div className="grid grid-rows-2 sm:grid-cols-2 bg-footerbg gap-4 p-4">
-        <div className="row-span-2 text-justify ">
+      <div className="grid grid-rows-1 sm:grid-cols-2 bg-footerbg gap-4 p-4">
+        <div className="row-span-2 text-justify p-4 min-w-[320px]">
           <h2 className="text-xl font-bold text-linkcolor">
             Financial Consultants
           </h2>
@@ -37,9 +39,9 @@ const Footer = () => {
             over 700 branches working under Financial Consultants.
           </p>
         </div>
-        <div className="gap-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 text-linkcolor font-semibold">
+        <div className="gap-4 p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 text-linkcolor font-semibold">
           <ul className="">
-            <h2 className="font-bold">LOANS</h2>
+            <h2 className="text-primarycolor font-bold">LOANS</h2>
             <li>Personal loan</li>
             <li>Business loan</li>
             <li>Gold loan</li>
@@ -52,38 +54,39 @@ const Footer = () => {
           </ul>
 
           <ul>
-            <h2 className="font-bold">BANKING</h2>
+            <h2 className="text-primarycolor font-bold">BANKING</h2>
             <li>OverDraft Limit</li>
             <li>Credit card Limit</li>
             <li>Credit cards</li>
           </ul>
           <ul>
-            <h2 className="font-bold">INSURANCE</h2>
+            <h2 className="text-primarycolor font-bold">INSURANCE</h2>
             <li>Motor insurance</li>
             <li>Health insurance</li>
             <li>Life insurance</li>
             <li>Travel insurance</li>
           </ul>
           <ul>
-            <h2 className="font-bold">MUTUAL FUNDS</h2>
+            <h2 className="text-primarycolor font-bold">MUTUAL FUNDS</h2>
             <li>IPO</li>
           </ul>
           <ul>
-            <h2 className="font-bold">CONSULTATIONS</h2>
+            <h2 className="text-primarycolor font-bold">CONSULTATIONS</h2>
             <li>Personal financial advising</li>
           </ul>
           <ul>
-            <h2 className="font-bold">COMPANY</h2>
+            <h2 className="text-primarycolor font-bold">COMPANY</h2>
            <Link to="/about-us"><li>About Us</li></Link>
             <li>Careers</li>
-            <li>Terms of Use</li>
-            <li>Privacy Policy</li>
+            <Link to="/terms-and-conditions"><li>Terms of Use</li></Link>
+            <Link to="/privacy"><li>Privacy Policy</li></Link>
             <li>Grievance Redressal</li>
+            <Link to="/faqs"><li>FAQS</li></Link>
           </ul>
 
           <ul className="">
-            <h2 className="font-bold">FIND US ONLINE</h2>
-            <div className="flex gap-3 w-7">
+            <h2 className="text-primarycolor font-bold">FIND US ONLINE</h2>
+            <div className="flex gap-3 w-5 md:w-6">
               <img src={facebook} alt="fbicon" />
               <img src={instagram} alt="instaicon" />
               <img src={social} alt="gmailicon" />
@@ -91,7 +94,7 @@ const Footer = () => {
             </div>
           </ul>
           <ul className="">
-            <h2 className="">REGD. OFFICE ADDRESS</h2>
+            <h2 className="text-primarycolor font-bold">REGD. OFFICE ADDRESS</h2>
             <ul className="text-xs text-primarycolor">
               <li>Financial Consultant</li>
               <li>Noida Sector 62 Block A,</li>
@@ -102,6 +105,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
+    </section>
     </>
   );
 };

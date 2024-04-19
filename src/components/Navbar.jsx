@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../../public/fclogo.svg";
 import { Link } from "react-router-dom";
 import { useUser, UserButton } from "@clerk/clerk-react";
-import DropdownComp from "./DropdownComp";
+
 
 // needs final touches and dropdown and on hover menus
 
@@ -10,7 +10,7 @@ function Navbar() {
   const { isSignedIn, user, isLoaded } = useUser();
   return (
     <>
-      <nav className="bg-white shadow-md font-fubuntu w-full flex justify-between items-center border py-2 px-3 gap-3 ">
+      <nav className="bg-white shadow-sm font-fubuntu w-full flex justify-between items-center border py-2 px-3 gap-3 ">
         <div className="flex justify-center items-center">
           <Link to="/">
             <img className="w-40 h-[60px]" src={logo} alt="image" />
@@ -24,7 +24,7 @@ function Navbar() {
         <div className=" hidden lg:flex gap-3 text-md xl:text-xl text-primarycolor relative ">
           <Link to="/">
             <button className="hover:text-linkcolor ">
-              <DropdownComp head={"Loan"} />
+              {/* <DropdownComp head={"Loan"} /> */} Loans
             </button>
           </Link>
           <Link to="/">
